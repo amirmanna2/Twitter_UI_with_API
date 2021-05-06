@@ -30,7 +30,8 @@ public class Twitter_ExplorePage extends Abstract_Class {
     WebElement options;
     @FindBy(xpath = "//a[@data-testid='AccountSwitcher_Logout_Button']")
     WebElement signOut;
-
+    @FindBy(xpath = "//div[@data-testid='confirmationSheetConfirm']")
+    WebElement confirmSignOut;
 
 
     //create a method for click
@@ -74,5 +75,11 @@ public class Twitter_ExplorePage extends Abstract_Class {
     public void signOut() {
         Reusable_Actions_PageObject.clickOnElement(driver, signOut, logger, "sign out");
     }//end of click method
+
+
+    //Beginning of click on confirm sign out method
+    public void confirmSignOut(){
+        Reusable_Actions_PageObject.clickOnElement(driver, confirmSignOut, logger, "confirm log out");
+    }
 
 }//end of java class
